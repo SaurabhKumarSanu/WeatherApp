@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">SkyCast</div>
+        <form id="searchForm" class="search-form">
+          <input id="searchInput" type="text" value="Delhi" aria-label="Search city" />
+          <button type="submit">Search</button>
+        </form>
+        <div class="unit-toggle" aria-label="Temperature units">
+          <button class="unit-btn active" data-unit="C">°C</button>
+          <button class="unit-btn" data-unit="F">°F</button>
+        </div>
+      </header>
+
+      <main class="dashboard">
+        <section class="hero-card">
+          <div class="hero-copy">
+            <p class="eyebrow">Current weather</p>
+            <h1 id="cityName">Delhi</h1>
+            <p id="weatherDescription">Clear sky</p>
+            <div class="temperature-row">
+              <span id="temperature" class="temperature">30°C</span>
+              <span id="feelsLike" class="feels-like">Feels like 32°C</span>
+            </div>
+          </div>
+          <div id="weatherIcon" class="weather-icon" aria-label="Weather icon">☀️</div>
+        </section>
+
+        <section class="stats-grid">
+          <article class="stat-card">
+            <span class="label">Humidity</span>
+            <strong id="humidity">55%</strong>
+          </article>
+          <article class="stat-card">
+            <span class="label">Wind</span>
+            <strong id="wind">6.4 km/h</strong>
+          </article>
+          <article class="stat-card">
+            <span class="label">Visibility</span>
+            <strong id="visibility">8.5 km</strong>
+          </article>
+          <article class="stat-card">
+            <span class="label">Pressure</span>
+            <strong id="pressure">1012 hPa</strong>
+          </article>
+        </section>
+
+        <section class="forecast-panel">
+          <div class="panel-header">
+            <h2>3-day outlook</h2>
+          </div>
+          <div id="forecast" class="forecast-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
